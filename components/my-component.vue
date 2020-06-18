@@ -6,11 +6,8 @@
  * @Description: In User Settings Edit
  * @FilePath: \bpsp-uie:\doit\html-vue\components\my-components.vue
 --> 
-
 <template>
-    <div class="hello">
-        Hello {{who}}
-    </div>
+    <Slider v-model="value" range></Slider>
 </template>
  
 <script>
@@ -18,7 +15,7 @@
         name: 'myComponent',
         data: function () {
             return {
-                who: 'world'
+                value: [20, 50]
             }
         }
     }
