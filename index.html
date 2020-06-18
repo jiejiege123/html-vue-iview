@@ -1,0 +1,40 @@
+<!--
+ * @Author: your name
+ * @Date: 2020-06-18 14:05:38
+ * @LastEditTime: 2020-06-18 17:29:55
+ * @LastEditors: Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: \bpsp-uie:\doit\html-vue\index.html
+--> 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./assets/iview-4.2.0.css">
+  <script src="./assets/vue.js"></script>
+  <script src="./assets/httpVueLoader.js"></script>
+  <script src="./assets/iview-4.2.0.js"></script>
+</head>
+
+
+<body>
+  <div id="app">
+      <p>父组件说：{{message}}</p>
+      <!--使用组件-->
+      <my-component></my-component>
+  </div>
+<script>
+  new Vue({
+      el: '#app',
+      components: {
+        'myComponent':httpVueLoader('myComponents.vue')
+      },
+      data:{
+          message:"我是父组件"
+      }
+  })
+</script>
+</body>
+</html>
