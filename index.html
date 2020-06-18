@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-06-18 14:05:38
- * @LastEditTime: 2020-06-18 17:29:55
+ * @LastEditTime: 2020-06-18 17:57:39
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \bpsp-uie:\doit\html-vue\index.html
@@ -21,19 +21,19 @@
 
 <body>
   <div id="app">
-      <p>父组件说：{{message}}</p>
-      <!--使用组件-->
-      <my-component></my-component>
+    <p>父组件说：{{message}}</p>
+    <!--使用组件-->
+    <my-component></my-component>
   </div>
 <script>
   new Vue({
-      el: '#app',
-      components: {
-        'myComponent':httpVueLoader('myComponents.vue')
-      },
-      data:{
-          message:"我是父组件"
-      }
+    el: '#app',
+    components: {
+      'my-component':httpVueLoader('my-component.vue')
+    },
+    data:{
+      message:"我是父组件"
+    }
   })
 </script>
 </body>
